@@ -1,0 +1,56 @@
+#!/usr/bin/perl
+
+#LICENSE:
+
+#Please see the LICENSE file included with this distribution 
+#or see the following website http://projectamin.org.
+
+use strict;
+use FindBin qw($Bin);
+use lib ("$Bin/../lib");
+use Bitcache;
+use Bitcache::Opts;
+
+my $opts = Bitcache::Opts->new();
+my $help = (<<END);
+
+bitcache is a distributed cache.
+
+END
+
+#define help
+$opts->help($help);
+
+my $usage = (<<END);
+[-h|-help]
+[-v|-version]
+[-d|-daemon]
+
+END
+
+$opts->usage($usage);
+
+my $version = "0.0.1";
+$opts->version($version);
+
+#load opts
+$opts->get_opts($opts);
+
+if ($opts->daemon) {
+     my $server = Bitcache->new('Bin' => $Bin);
+#either supply values for bitcache as shown or have a 
+# ~/.bitcache/config.xml that has the values inside and
+#let bitcache figure out the details.
+#                    'Port' => '8000',
+#                    'Ip' => '192.168.1.200',
+#                    'Key' => 'testkeys'
+
+     #decrypt the daemon's private keys
+     $server->get_password();
+     
+     $server->Run();
+}
+     
+exit;
+
+1;

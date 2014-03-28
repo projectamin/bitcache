@@ -1,0 +1,17 @@
+<bc:cachelist xmlns:bc="http://projectamin.org/ns/bc/">
+   <bc:object>
+     <bc:uri>file://bc/cache/index/hash1.xml</bc:uri>
+   </bc:object>
+   <bc:object>
+     <bc:uri>file://bc/cache/index/hash2.xml</bc:uri>
+   </bc:object>
+   <bc:object>
+     <bc:uri>file://bc/cache/index/hash3.xml</bc:uri>
+   </bc:object>
+   <bc:cachelist>
+     <bc:uri>file://bc/cache/index/sec/sec_cache.xml</bc:uri>
+   </bc:cachelist>
+   <bc:bitcache>
+     <bc:uri>file://bc/cache/index/main_bitcache.xml</bc:uri>
+   </bc:bitcachce>
+</bc:cachelist>

@@ -1,0 +1,11 @@
+<bc:object xmlns:bc="http://projectamin.org/ns/bc/">
+     <bc:date>timedate</bc:date>
+     <bc:hash>some_object_hash</bc:hash>
+     <bc:signer>signer_hash</bc:signer>
+     <bc:signer2>signer2_hash</bc:signer2>
+     <bc:signer3>
+          <bc:hash type="object">signer3_hash</bc:hash>
+          <bc:hash type="signer">signer3_hash</bc:hash>
+          <bc:name>Some Big Corp.</bc:name>
+     </bc:signer3>
+</bc:object>

@@ -1,0 +1,25 @@
+<bc:bitcache xmlns:bc="http://projectamin.org/ns/bc/">
+   <bc:server name="my_box">
+     <bc:ip>192.168.1.1</bc:ip>
+     <bc:port>8001</bc:port>
+     <bc:search>/search/</bc:search>
+   </bc:server>
+
+   <bc:server name="friend_box">
+     <bc:ip>192.168.1.2</bc:ip>
+     <bc:port>8002</bc:port>
+     <bc:search>/search/</bc:search>
+   </bc:server>
+
+   <bc:server name="corp_box">
+     <bc:ip>192.168.1.3</bc:ip>
+     <bc:port>8003</bc:port>
+     <bc:search>/somecorp/security.ext</bc:search>
+   </bc:server>
+
+   <bc:server name="public_box">
+     <bc:ip>192.168.1.4</bc:ip>
+     <bc:port>8004</bc:port>
+     <bc:search>/query/files/bc.php</bc:search>
+   </bc:server>
+</bc:bitcache>
